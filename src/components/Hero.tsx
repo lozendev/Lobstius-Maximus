@@ -23,7 +23,7 @@ export default function Hero() {
           className="w-full h-full object-cover opacity-50"
           poster="https://picsum.photos/seed/roman/1920/1080"
         >
-          <source src="/HeroBG.webm" type="video/webm" />
+          <source src="HeroBG.webm" type="video/webm" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/60 to-[#050505]"></div>
       </div>
@@ -31,7 +31,7 @@ export default function Hero() {
       {/* Navigation */}
       <nav className="absolute top-0 left-0 w-full p-6 z-20 flex justify-between items-center max-w-7xl mx-auto right-0">
         <div className="flex flex-col items-center w-24">
-          <img src="/prof2.png" alt="Lobstius" className="w-full h-auto object-contain" />
+          <img src="prof2.png" alt="Lobstius" className="w-full h-auto object-contain" />
           <a href="https://www.lozen.dev" target="_blank" rel="noopener noreferrer" className="font-sans text-[6px] uppercase tracking-[0.2em] text-gray-500 opacity-50 mt-1 w-full text-center hover:opacity-100 transition-opacity">
             LOZENPRJKT#2
           </a>

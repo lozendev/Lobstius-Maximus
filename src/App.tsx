@@ -12,7 +12,7 @@ import Footer from './components/Footer';
 export default function App() {
   useEffect(() => {
     const playAudio = () => {
-      const audio = new Audio('/LobstarSpeech.mp3');
+      const audio = new Audio('LobstarSpeech.mp3');
       audio.play().catch(e => console.error("Audio playback failed:", e));
       // Remove event listeners after first interaction
       document.removeEventListener('click', playAudio);

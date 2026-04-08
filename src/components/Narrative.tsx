@@ -54,7 +54,7 @@ export default function Narrative() {
           className="md:w-1/2 flex items-end justify-center md:justify-end mt-12 md:mt-0 relative"
         >
           <img
-            src="/Abt.png"
+            src="Abt.png"
             alt="Lobstius Lore"
             className="w-full max-w-2xl lg:max-w-3xl h-auto object-contain object-bottom scale-110 origin-bottom"
           />
