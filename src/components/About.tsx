@@ -24,12 +24,12 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="relative py-32 bg-[#020202] flex flex-col items-center overflow-hidden">
+    <section id="about" className="relative pt-32 bg-[#020202] flex flex-col items-center overflow-hidden">
       {/* Divider */}
       <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-yellow-400 to-red-600 z-20"></div>
 
       {/* Background Image with Overlay */}
-      <div 
+      <div
         className="absolute inset-0 z-0 opacity-10"
         style={{
           backgroundImage: 'url("https://picsum.photos/seed/underwater/1920/1080")',
@@ -41,7 +41,7 @@ export default function About() {
       <div className="absolute inset-0 bg-gradient-to-b from-[#050505] via-[#0a0a0a]/90 to-[#050505] z-0"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 w-full flex flex-col items-center">
-        
+
         {/* Header Area */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -50,10 +50,8 @@ export default function About() {
           transition={{ duration: 0.8 }}
           className="flex flex-col items-center text-center mb-20"
         >
-          <div className="flex items-center space-x-4 mb-6">
-            <div className="w-8 h-[2px] bg-lobstius-red"></div>
+          <div className="flex items-center mb-6">
             <span className="text-lobstius-red font-bold tracking-[0.2em] text-sm uppercase">WHY $LOBSTIUS?</span>
-            <div className="w-8 h-[2px] bg-lobstius-red"></div>
           </div>
 
           <h2 className="font-serif text-5xl md:text-6xl font-bold text-white mb-8">
@@ -66,7 +64,7 @@ export default function About() {
         </motion.div>
 
         {/* 3-Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full mb-32">
           {cards.map((card, index) => (
             <motion.div
               key={index}
@@ -74,14 +72,10 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className={`relative bg-[#0f0f0f]/80 backdrop-blur-sm rounded-2xl p-8 flex flex-col items-center text-center border ${
-                card.active ? 'border-lobstius-red shadow-[0_0_30px_rgba(230,57,70,0.15)]' : 'border-gray-800'
-              }`}
+              className={`relative bg-[#0f0f0f]/80 backdrop-blur-sm rounded-2xl p-8 flex flex-col items-center text-center border border-lobstius-red shadow-[0_0_30px_rgba(230,57,70,0.15)]`}
             >
-              {card.active && (
-                <div className="absolute inset-0 rounded-2xl border border-lobstius-red/50 pointer-events-none"></div>
-              )}
-              
+              <div className="absolute inset-0 rounded-2xl border border-lobstius-red/50 pointer-events-none"></div>
+
               <div className="text-5xl mb-6">{card.icon}</div>
               <h3 className="font-serif text-2xl font-bold text-white mb-4">{card.title}</h3>
               <p className="text-gray-400 text-sm leading-relaxed font-light">
